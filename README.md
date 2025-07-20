@@ -2,6 +2,8 @@
 
 ## React Bottom Sheet with Multiple Screen Snap Points and Spring Motion.
 
+## Deploy :: [LiveDemo](https://flame-assignment-bay.vercel.app/)
+
 ## ✨ Features
 
 - Built with React
