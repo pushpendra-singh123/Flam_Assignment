@@ -1,8 +1,11 @@
 import "./App.css";
-
+import ButtomSheet from "./components/BottomSheet";
 function App() {
-
-  return <></>;
+  return (
+    <>
+      <ButtomSheet />
+    </>
+  );
 }
 
 export default App;
