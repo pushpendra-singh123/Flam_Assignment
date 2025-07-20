@@ -44,23 +44,24 @@ export default function BottomSheet() {
         style={{ height: `${height}vh` }}
         className="fixed bottom-0 w-[70%] bg-black rounded-t-2xl p-2 transition-all duration-500"
       >
-        <div className="flex justify-center p-2 align-middle">
+        <div className="static flex justify-center p-2 align-middle">
           <div
             onMouseDown={handleMouseDown}
-            className="cursor-grab  w-30 h-2 bg-white rounded-full"
+            className="cursor-grab  w-50 h-4 bg-white rounded-full absolute -top-0 my-1"
           ></div>
         </div>
 
         <div className="bg-white rounded-md text-black p-2 h-full overflow-auto">
           <div className="mb-4 space-x-2">
             <button
-              onClick={() => setHeight(90)}
+              onClick={() => setHeight(50)}
+              onDoubleClick={() => setHeight(90)}
               className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
             >
               Open
             </button>
             <button
-              onClick={() => setHeight(5)}
+              onClick={() => setHeight(4)}
               className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
             >
               Close
