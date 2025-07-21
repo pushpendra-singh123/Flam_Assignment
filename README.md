@@ -1,4 +1,4 @@
-# Flame Assignment
+# Flam Assignment
 
 ## React Bottom Sheet with Multiple Screen Snap Points and Spring Motion.
 
