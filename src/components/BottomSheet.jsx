@@ -24,14 +24,37 @@ export default function BottomSheet() {
     else setHeight(50);
   };
 
+  const handleTouchStart = (e) => {
+    setDragStartY(e.touches[0].pageY);
+  };
+
+  const handleTouchMove = (e) => {
+    if (dragStartY === null) return;
+    const newY = e.touches[0].pageY;
+    const change = ((dragStartY - newY) / window.innerHeight) * 100;
+    setHeight(height + change);
+    setDragStartY(newY);
+  };
+
+  const handleTouchEnd = () => {
+    setDragStartY(null);
+    if (height < 35) setHeight(10);
+    else if (height > 75) setHeight(90);
+    else setHeight(50);
+  };
+
   useEffect(() => {
     if (dragStartY !== null) {
       window.addEventListener("mousemove", handleMouseMove);
       window.addEventListener("mouseup", handleMouseUp);
+      window.addEventListener("touchmove", handleTouchMove);
+      window.addEventListener("touchend", handleTouchEnd);
     }
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("mouseup", handleMouseUp);
+      window.removeEventListener("touchmove", handleTouchMove);
+      window.removeEventListener("touchend", handleTouchEnd);
     };
   }, [dragStartY]);
 
