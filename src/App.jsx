@@ -1,9 +1,11 @@
-import "./App.css";
-import ButtomSheet from "./components/BottomSheet";
+import BottomSheet from "./components/BottomSheet";
+import NavBar from "./components/NavBar";
+
 function App() {
   return (
     <>
-      <ButtomSheet />
+      <NavBar />
+      <BottomSheet />
     </>
   );
 }
