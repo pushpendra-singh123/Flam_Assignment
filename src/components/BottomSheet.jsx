@@ -70,7 +70,9 @@ export default function BottomSheet() {
         <div className="static flex justify-center p-2 align-middle">
           <div
             onMouseDown={handleMouseDown}
-            className="cursor-grab  w-50 h-4 bg-white rounded-full absolute -top-0 my-1"
+            onTouchStart={handleTouchStart}
+            className="cursor-grab w-50 h-4 bg-white rounded-full absolute -top-0 my-1"
+            style={{ touchAction: "none" }}
           ></div>
         </div>
 
